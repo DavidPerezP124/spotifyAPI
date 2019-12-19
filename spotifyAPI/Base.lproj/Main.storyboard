@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="spotifyAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-Kq-McL" customClass="GradientUIImageView" customModule="spotifyAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="734"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-oZ-sY4">
+                                <rect key="frame" x="0.0" y="780" width="414" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPF-UJ-tjP" customClass="RoundedButton" customModule="spotifyAPI" customModuleProvider="target">
+                                        <rect key="frame" x="174.5" y="8.5" width="65" height="65.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="Triangle"/>
+                                        <connections>
+                                            <action selector="didPressPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvu-6K-hhA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-C9-GYs" customClass="RoundedButton" customModule="spotifyAPI" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="20.5" width="41" height="41"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="rewind:" destination="NaH-m1-3qp" eventType="touchUpInside" id="DJS-Fo-w19"/>
+                                            <action selector="rewind:" destination="U8z-oZ-sY4" eventType="touchUpInside" id="ojj-m6-0ou"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-r0-9dY" customClass="RoundedButton" customModule="spotifyAPI" customModuleProvider="target">
+                                        <rect key="frame" x="289" y="20.5" width="41" height="41"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="didPressNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrA-Q6-r3F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jKE-C9-GYs" firstAttribute="centerY" secondItem="U8z-oZ-sY4" secondAttribute="centerY" id="3dJ-Nz-UoI"/>
+                                    <constraint firstItem="jKE-C9-GYs" firstAttribute="height" secondItem="U8z-oZ-sY4" secondAttribute="height" multiplier="0.5" id="D28-8Z-oKt"/>
+                                    <constraint firstItem="xeS-r0-9dY" firstAttribute="centerY" secondItem="U8z-oZ-sY4" secondAttribute="centerY" id="Fcf-On-hok"/>
+                                    <constraint firstItem="nPF-UJ-tjP" firstAttribute="centerY" secondItem="U8z-oZ-sY4" secondAttribute="centerY" id="GZD-a0-Lco"/>
+                                    <constraint firstItem="jKE-C9-GYs" firstAttribute="width" secondItem="U8z-oZ-sY4" secondAttribute="height" multiplier="0.5" id="MWd-zv-ssB"/>
+                                    <constraint firstItem="nPF-UJ-tjP" firstAttribute="height" secondItem="U8z-oZ-sY4" secondAttribute="height" multiplier="0.8" id="NXU-4V-dV0"/>
+                                    <constraint firstItem="xeS-r0-9dY" firstAttribute="height" secondItem="U8z-oZ-sY4" secondAttribute="height" multiplier="0.5" id="X7W-My-ahA"/>
+                                    <constraint firstItem="nPF-UJ-tjP" firstAttribute="width" secondItem="U8z-oZ-sY4" secondAttribute="height" multiplier="0.8" id="a1N-TA-Nc3"/>
+                                    <constraint firstItem="nPF-UJ-tjP" firstAttribute="centerX" secondItem="U8z-oZ-sY4" secondAttribute="centerX" id="a22-6r-zWj"/>
+                                    <constraint firstItem="xeS-r0-9dY" firstAttribute="width" secondItem="U8z-oZ-sY4" secondAttribute="height" multiplier="0.5" id="cz6-50-vTz"/>
+                                    <constraint firstItem="nPF-UJ-tjP" firstAttribute="leading" secondItem="jKE-C9-GYs" secondAttribute="trailing" constant="41.5" id="giv-fa-0aD"/>
+                                    <constraint firstItem="xeS-r0-9dY" firstAttribute="leading" secondItem="nPF-UJ-tjP" secondAttribute="trailing" constant="49.5" id="nTg-0r-afn"/>
+                                </constraints>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WbO-gL-5hx">
+                                <rect key="frame" x="0.0" y="778" width="414" height="2"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vls-sk-ns9">
+                                <rect key="frame" x="10" y="696.5" width="207" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldm-Em-CMz">
+                                <rect key="frame" x="207" y="696.5" width="207" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vls-sk-ns9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0Il-Mk-yvH"/>
+                            <constraint firstItem="d8L-Kq-McL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0ay-pV-mpM"/>
+                            <constraint firstItem="ldm-Em-CMz" firstAttribute="width" secondItem="Vls-sk-ns9" secondAttribute="width" id="1Wr-Hl-V73"/>
+                            <constraint firstItem="U8z-oZ-sY4" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="1qo-p2-4Es"/>
+                            <constraint firstAttribute="trailing" secondItem="WbO-gL-5hx" secondAttribute="trailing" id="G4N-Iy-sN9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U8z-oZ-sY4" secondAttribute="bottom" id="H7n-iq-N01"/>
+                            <constraint firstItem="Vls-sk-ns9" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="Hjh-b1-2gp"/>
+                            <constraint firstItem="U8z-oZ-sY4" firstAttribute="top" secondItem="WbO-gL-5hx" secondAttribute="bottom" id="IyL-JW-Q7I"/>
+                            <constraint firstItem="U8z-oZ-sY4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sp8-n3-qUn"/>
+                            <constraint firstItem="WbO-gL-5hx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tcl-Ls-JQ2"/>
+                            <constraint firstItem="Vls-sk-ns9" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="XU7-2I-E7i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldm-Em-CMz" secondAttribute="trailing" id="fJ4-QU-kQl"/>
+                            <constraint firstItem="U8z-oZ-sY4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ftG-d5-1KQ"/>
+                            <constraint firstItem="d8L-Kq-McL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kQX-Oq-lcd"/>
+                            <constraint firstItem="d8L-Kq-McL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mFP-at-80X"/>
+                            <constraint firstItem="WbO-gL-5hx" firstAttribute="top" secondItem="ldm-Em-CMz" secondAttribute="bottom" id="myG-Wh-pb0"/>
+                            <constraint firstItem="WbO-gL-5hx" firstAttribute="top" secondItem="d8L-Kq-McL" secondAttribute="bottom" id="uHQ-eb-EmN"/>
+                            <constraint firstItem="WbO-gL-5hx" firstAttribute="top" secondItem="Vls-sk-ns9" secondAttribute="bottom" id="wYn-oY-ckU"/>
+                            <constraint firstItem="ldm-Em-CMz" firstAttribute="height" secondItem="Vls-sk-ns9" secondAttribute="height" id="yHf-aD-llz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumArtImageView" destination="d8L-Kq-McL" id="ghI-fo-bxK"/>
+                        <outlet property="duration" destination="ldm-Em-CMz" id="GJe-0Q-Wy8"/>
+                        <outlet property="nextButton" destination="xeS-r0-9dY" id="6E5-I9-Ad0"/>
+                        <outlet property="playPauseButton" destination="nPF-UJ-tjP" id="F60-6C-o3e"/>
+                        <outlet property="prevButton" destination="jKE-C9-GYs" id="CBK-uS-7Ey"/>
+                        <outlet property="trackNameLabel" destination="Vls-sk-ns9" id="QTo-1O-cdL"/>
+                        <outlet property="trackProgress" destination="WbO-gL-5hx" id="8xR-ne-cHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="NaH-m1-3qp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Triangle" width="14" height="15"/>
+    </resources>
+</document>
